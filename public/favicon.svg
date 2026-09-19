@@ -1,24 +1,72 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
   <defs>
-    <linearGradient id="shieldBg" x1="50" y1="4" x2="50" y2="96" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#0a2316" />
-      <stop offset="100%" stop-color="#010703" />
+    <!-- Titanium Platinum Metallic Gradient for Top Wing -->
+    <linearGradient id="favWingGrad" x1="16" y1="20" x2="84" y2="20" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#94a3b8" />
+      <stop offset="25%" stop-color="#ffffff" />
+      <stop offset="50%" stop-color="#ffffff" />
+      <stop offset="75%" stop-color="#ffffff" />
+      <stop offset="100%" stop-color="#94a3b8" />
     </linearGradient>
-    <linearGradient id="leftWing" x1="24" y1="32" x2="50" y2="84" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#86efac" />
-      <stop offset="50%" stop-color="#67eb34" />
-      <stop offset="100%" stop-color="#047857" />
-    </linearGradient>
-    <linearGradient id="rightWing" x1="76" y1="32" x2="50" y2="84" gradientUnits="userSpaceOnUse">
+
+    <!-- Left V Blade -->
+    <linearGradient id="favBladeLeft" x1="20" y1="34" x2="49" y2="88" gradientUnits="userSpaceOnUse">
       <stop offset="0%" stop-color="#ffffff" />
-      <stop offset="50%" stop-color="#10b981" />
-      <stop offset="100%" stop-color="#064e3b" />
+      <stop offset="50%" stop-color="#e2e8f0" />
+      <stop offset="100%" stop-color="#64748b" />
+    </linearGradient>
+
+    <!-- Right V Blade -->
+    <linearGradient id="favBladeRight" x1="80" y1="34" x2="51" y2="88" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#cbd5e1" />
+      <stop offset="50%" stop-color="#94a3b8" />
+      <stop offset="100%" stop-color="#334155" />
     </linearGradient>
   </defs>
-  <polygon points="50,6 84,14 86,48 50,94 14,48 16,14" fill="url(#shieldBg)" stroke="#67eb34" stroke-width="3" stroke-linejoin="round" />
-  <path d="M50 82 L26 38 L38 32 L50 58 Z" fill="url(#leftWing)" />
-  <path d="M50 82 L74 38 L62 32 L50 58 Z" fill="url(#rightWing)" />
-  <line x1="50" y1="58" x2="50" y2="82" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" />
-  <polygon points="50,19 57,36 50,51 43,36" fill="#ffffff" />
-  <circle cx="50" cy="35" r="2" fill="#67eb34" />
+
+  <!-- 1. Top Floating Aerodynamic Wing Bar (Tesla-style arch) -->
+  <path
+    d="M 16 24.5 C 32 17.5 68 17.5 84 24.5 L 81.5 28.5 C 68 22.5 32 22.5 18.5 28.5 Z"
+    fill="url(#favWingGrad)"
+    stroke="#ffffff"
+    stroke-width="0.75"
+  />
+  <path
+    d="M 22 28 C 34 23 66 23 78 28"
+    stroke="#67eb34"
+    stroke-width="0.8"
+    stroke-opacity="0.9"
+  />
+
+  <!-- 2. The Monolithic Chiseled "V" Body -->
+  <!-- Left Blade -->
+  <polygon
+    points="21,34.5 36,34.5 49,67 49,88.5"
+    fill="url(#favBladeLeft)"
+  />
+  <polygon
+    points="21,34.5 24,34.5 49,88.5 47,88.5"
+    fill="#ffffff"
+  />
+
+  <!-- Right Blade -->
+  <polygon
+    points="79,34.5 64,34.5 51,67 51,88.5"
+    fill="url(#favBladeRight)"
+  />
+  <polygon
+    points="79,34.5 76,34.5 51,88.5 53,88.5"
+    fill="#475569"
+  />
+
+  <!-- Center Split Gap -->
+  <line x1="50" y1="67" x2="50" y2="88.5" stroke="#020a06" stroke-width="2" />
+
+  <!-- 3. Central Dorsal Needle Dart -->
+  <polygon points="50,34 53,44 50,56 47,44" fill="#ffffff" />
+  <circle cx="50" cy="45" r="1.5" fill="#67eb34" />
+
+  <!-- Keel Tip -->
+  <polygon points="50,89 48,85 52,85" fill="#67eb34" />
 </svg>
+

@@ -3,6 +3,7 @@ import { ArrowRight, Gauge, Zap, Sparkles, Shield, Calendar, ChevronRight, Eye }
 import { motion, AnimatePresence } from 'motion/react';
 import { CARS_DATA } from '../data/carsData';
 import { CarItem } from '../types';
+import { VeloxEmblemMark } from './VeloxLogo';
 
 interface HeroSectionProps {
   onOpenTestDriveModal: (carId?: string) => void;
@@ -66,10 +67,10 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#052815]/95 border border-emerald-500/40 text-emerald-300 text-xs font-bold uppercase tracking-wider mb-4 shadow-[0_0_15px_rgba(103,235,52,0.2)] backdrop-blur-xl"
+            className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-[#052815]/95 border border-emerald-500/40 text-emerald-300 text-xs font-bold uppercase tracking-wider mb-4 shadow-[0_0_15px_rgba(103,235,52,0.2)] backdrop-blur-xl"
           >
-            <span className="w-2 h-2 rounded-full bg-[#67eb34] shadow-[0_0_8px_#67eb34] animate-ping" />
-            <span>Showroom Exclusivo Velox Motors</span>
+            <VeloxEmblemMark size={18} />
+            <span className="tracking-widest font-mono text-[11px] text-white">VELOX OFFICIAL ATELIER</span>
             <span className="text-emerald-500/70">•</span>
             <span className="text-[#67eb34] font-black">{currentCar.badge}</span>
           </motion.div>

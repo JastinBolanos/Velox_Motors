@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { Car, Phone, Mail, MapPin, ArrowRight, Shield, Check, Globe } from 'lucide-react';
+import { Phone, Mail, MapPin, ArrowRight, Shield, Check, Globe } from 'lucide-react';
+import { VeloxLogo } from './VeloxLogo';
 
 interface FooterProps {
   onOpenTestDriveModal: () => void;
@@ -70,19 +71,7 @@ export const Footer: React.FC<FooterProps> = ({
           
           {/* Brand Info */}
           <div className="space-y-5">
-            <div className="flex items-center gap-3.5">
-              <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-emerald-500/25 to-[#021008] border-2 border-emerald-500/50 flex items-center justify-center shadow-md">
-                <Car className="w-6 h-6 text-[#67eb34]" />
-              </div>
-              <div className="flex flex-col">
-                <span className="font-black text-2xl text-white tracking-wider">
-                  VELOX <span className="text-[#67eb34]">MOTORS</span>
-                </span>
-                <span className="text-[10px] tracking-widest text-emerald-400 font-bold uppercase">
-                  Exotic & Hypercars
-                </span>
-              </div>
-            </div>
+            <VeloxLogo size="md" variant="full" tagline="ATELIER & HYPERCARS SHOWROOM" />
 
             <p className="text-slate-300 text-sm leading-relaxed">
               El concesionario boutique de referencia mundial para la adquisición de hiperdeportivos, superautos eléctricos y prototipos de colección.

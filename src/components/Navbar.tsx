@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import { Phone, ChevronDown, ArrowRight, Menu, X, Car, Shield, Sparkles, Calendar } from 'lucide-react';
+import { Phone, ChevronDown, ArrowRight, Menu, X, Shield, Sparkles, Calendar } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
+import { VeloxLogo } from './VeloxLogo';
 
 interface NavbarProps {
   onOpenTestDriveModal: (carId?: string) => void;
@@ -20,25 +21,9 @@ export const Navbar: React.FC<NavbarProps> = ({
     <header className="sticky top-0 z-40 w-full border-b border-emerald-900/40 bg-[#020e07]/90 backdrop-blur-2xl shadow-[0_10px_25px_rgba(0,0,0,0.5)]" id="main-navigation">
       <div className="w-full px-4 sm:px-6 md:px-8 lg:px-10 h-16 sm:h-18 flex items-center justify-between">
         
-        {/* Brand Logo - Compact and elegant */}
-        <a href="#home" className="flex items-center gap-2.5 sm:gap-3 group cursor-pointer" id="brand-logo">
-          <div className="relative w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-gradient-to-br from-emerald-500/25 via-[#062916] to-[#021008] border border-emerald-500/50 flex items-center justify-center shadow-[0_0_15px_rgba(103,235,52,0.3)] group-hover:border-[#67eb34] group-hover:shadow-[0_0_20px_rgba(103,235,52,0.5)] transition-all duration-300">
-            <Car className="w-4.5 h-4.5 sm:w-5 sm:h-5 text-[#67eb34] transform group-hover:scale-105 transition-transform" />
-            <span className="absolute -top-0.5 -right-0.5 w-2 h-2 rounded-full bg-[#67eb34] shadow-[0_0_8px_#67eb34] animate-pulse" />
-          </div>
-          <div className="flex flex-col">
-            <div className="flex items-center gap-1.5">
-              <span className="font-black tracking-wider text-base sm:text-lg text-white font-sans">
-                VELOX
-              </span>
-              <span className="text-base sm:text-lg font-black text-[#67eb34] tracking-wider">
-                MOTORS
-              </span>
-            </div>
-            <span className="text-[9px] sm:text-[10px] tracking-[0.22em] text-emerald-400 font-bold uppercase leading-tight">
-              Exotic & Hypercars Showroom
-            </span>
-          </div>
+        {/* Brand Logo - Bespoke Apex Hypercar Crest & Typography */}
+        <a href="#home" className="group cursor-pointer" id="brand-logo" aria-label="Velox Motors Home">
+          <VeloxLogo size="md" variant="full" tagline="EXOTIC & HYPERCARS SHOWROOM" />
         </a>
 
         {/* Center Desktop Navigation Links - Compact font and spacing */}

@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
-import { X, CheckCircle2, ShieldCheck, CreditCard, Lock, Sparkles, Car } from 'lucide-react';
+import { X, CheckCircle2, ShieldCheck, CreditCard, Lock, Sparkles } from 'lucide-react';
 import { motion } from 'motion/react';
 import { CarItem } from '../types';
+import { VeloxEmblemMark } from './VeloxLogo';
 
 interface ReservationModalProps {
   isOpen: boolean;
@@ -107,8 +108,8 @@ export const ReservationModal: React.FC<ReservationModalProps> = ({
             </div>
 
             <div className="p-3 rounded-xl bg-[#020e07] border border-emerald-950 flex items-center justify-between text-xs">
-              <div className="flex items-center gap-2">
-                <Car className="w-4 h-4 text-[#67eb34]" />
+              <div className="flex items-center gap-2.5">
+                <VeloxEmblemMark size={20} />
                 <span className="font-bold text-white">{car.name}</span>
               </div>
               <span className="font-mono font-bold text-[#67eb34]">${car.priceUSD.toLocaleString()} USD</span>

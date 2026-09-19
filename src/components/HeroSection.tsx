@@ -3,7 +3,6 @@ import { ArrowRight, Gauge, Zap, Sparkles, Shield, Calendar, ChevronRight, Eye }
 import { motion, AnimatePresence } from 'motion/react';
 import { CARS_DATA } from '../data/carsData';
 import { CarItem } from '../types';
-import { VeloxEmblemMark } from './VeloxLogo';
 
 interface HeroSectionProps {
   onOpenTestDriveModal: (carId?: string) => void;
@@ -24,7 +23,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
 
   return (
     <section 
-      className="relative w-full min-h-[720px] lg:min-h-[840px] xl:min-h-[920px] flex items-center overflow-hidden bg-[#020a06]" 
+      className="relative w-full min-h-[720px] lg:min-h-[820px] xl:min-h-[880px] flex items-center overflow-hidden bg-[#020a06]" 
       id="home"
     >
       {/* ========================================================================= */}
@@ -57,19 +56,19 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
       </div>
 
       {/* ========================================================================= */}
-      {/* 2. FOREGROUND CONTENT & EXPANDED PROMINENT HERO DISPLAY                   */}
+      {/* 2. FOREGROUND CONTENT & PROMINENT HERO DISPLAY (VERTICALLY CENTERED)      */}
       {/* ========================================================================= */}
-      <div className="relative z-10 w-full max-w-[1920px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 py-10 sm:py-14 lg:py-20">
+      <div className="relative z-10 w-full max-w-[1920px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 py-8 sm:py-10 lg:py-12">
         <div className="w-full flex flex-col items-start text-left">
-          
-          {/* Tag Pill with Badge - Prominent Sizing */}
+
+          {/* Tag Pill with Text & Availability (without brand logo) */}
           <motion.div 
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="inline-flex items-center gap-3 px-5 py-2.5 rounded-full bg-[#052815]/95 border border-emerald-500/50 text-emerald-300 text-xs sm:text-sm font-bold uppercase tracking-wider mb-5 shadow-[0_0_20px_rgba(103,235,52,0.28)] backdrop-blur-xl"
+            className="inline-flex items-center gap-2.5 px-4.5 sm:px-5 py-2 sm:py-2.5 rounded-full bg-[#052815]/95 border border-emerald-500/50 text-emerald-300 text-xs sm:text-sm font-bold uppercase tracking-wider mb-4 sm:mb-5 shadow-[0_0_20px_rgba(103,235,52,0.28)] backdrop-blur-xl"
+            id="hero-atelier-pill"
           >
-            <VeloxEmblemMark size={22} />
             <span className="tracking-widest font-mono text-xs sm:text-sm text-white font-bold">VELOX OFFICIAL ATELIER</span>
             <span className="text-emerald-400 font-bold">•</span>
             <span className="text-[#67eb34] font-black tracking-wide">{currentCar.badge}</span>

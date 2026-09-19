@@ -193,11 +193,6 @@ export const VeloxEmblemMark: React.FC<{ size?: number; className?: string; anim
           fill="#67eb34"
         />
       </svg>
-
-      {/* High-Tech Pulse Beacon (Optional) */}
-      {animated && (
-        <span className="absolute -top-0.5 -right-0.5 w-1.5 h-1.5 rounded-full bg-[#67eb34] shadow-[0_0_8px_#67eb34] animate-pulse z-20" />
-      )}
     </div>
   );
 };
@@ -279,11 +274,10 @@ export const VeloxLogo: React.FC<VeloxLogoProps> = ({
         </div>
 
         {showTagline && (
-          <div className="flex items-center gap-2 mt-1.5">
+          <div className="mt-1.5">
             <span className={`font-semibold text-emerald-400/90 uppercase font-mono leading-none ${taglineSizes[size]} group-hover:text-emerald-300 transition-colors`}>
               {tagline}
             </span>
-            <span className="w-1 h-1 rounded-full bg-[#67eb34] opacity-90 shadow-[0_0_6px_#67eb34] hidden sm:inline-block" />
           </div>
         )}
       </div>

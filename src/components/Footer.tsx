@@ -29,13 +29,13 @@ export const Footer: React.FC<FooterProps> = ({
         <div className="p-8 sm:p-12 rounded-3xl bg-gradient-to-r from-[#031c10] via-[#02130a] to-[#010a05] border-2 border-emerald-500/40 mb-16 flex flex-col xl:flex-row items-center justify-between gap-8 shadow-[0_20px_50px_rgba(0,0,0,0.7)]">
           <div className="space-y-2 text-center xl:text-left max-w-3xl">
             <span className="text-xs sm:text-sm font-black text-[#67eb34] uppercase tracking-wider">
-              Club Privado Velox Motors
+              Velox Motors Private Club
             </span>
             <h3 className="text-2xl sm:text-3xl lg:text-4xl font-black text-white">
-              Recibe Avisos de Unidades Exclusivas Antes del Lanzamiento Público
+              Receive Private Allocations Before Public Market Release
             </h3>
             <p className="text-slate-300 text-sm sm:text-base">
-              Acceso prioritario a hiperdeportivos de edición limitada y eventos privados en circuito.
+              Priority allocation access for limited hypercars and private circuit track days.
             </p>
           </div>
 
@@ -43,14 +43,14 @@ export const Footer: React.FC<FooterProps> = ({
             {newsletterSubscribed ? (
               <div className="flex items-center gap-3 px-6 py-4 rounded-full bg-emerald-950/90 border-2 border-emerald-500/60 text-[#67eb34] font-bold text-sm sm:text-base animate-fadeIn shadow-lg">
                 <Check className="w-5 h-5" />
-                <span>¡Suscrito con éxito al boletín para coleccionistas!</span>
+                <span>Successfully subscribed to the private collectors register!</span>
               </div>
             ) : (
               <form onSubmit={handleSubscribe} className="flex flex-col sm:flex-row items-center gap-3 w-full xl:w-[480px]">
                 <input
                   type="email"
                   required
-                  placeholder="Tu correo de contacto..."
+                  placeholder="Your email address..."
                   value={newsletterEmail}
                   onChange={(e) => setNewsletterEmail(e.target.value)}
                   className="w-full px-5 py-4 rounded-full bg-[#020d07] border-2 border-emerald-900/80 text-sm sm:text-base text-white placeholder-slate-400 focus:outline-none focus:border-[#67eb34]"
@@ -59,7 +59,7 @@ export const Footer: React.FC<FooterProps> = ({
                   type="submit"
                   className="w-full sm:w-auto px-8 py-4 rounded-full bg-[#67eb34] hover:bg-[#7bf04c] text-black font-black text-sm uppercase tracking-wider shrink-0 transition-colors cursor-pointer shadow-lg"
                 >
-                  Unirme
+                  Join Club
                 </button>
               </form>
             )}
@@ -74,42 +74,42 @@ export const Footer: React.FC<FooterProps> = ({
             <VeloxLogo size="md" variant="full" tagline="ATELIER & HYPERCARS SHOWROOM" />
 
             <p className="text-slate-300 text-sm leading-relaxed">
-              El concesionario boutique de referencia mundial para la adquisición de hiperdeportivos, superautos eléctricos y prototipos de colección.
+              The premier global boutique showroom for the acquisition of exotic hypercars, electric supercars, and prototype collector vehicles.
             </p>
 
             <div className="flex items-center gap-2.5 text-emerald-400 font-mono text-sm font-semibold">
               <Globe className="w-5 h-5" />
-              <span>Entregas Globales en Contenedor Seguro</span>
+              <span>Global Climate-Controlled Enclosed Delivery</span>
             </div>
           </div>
 
           {/* Quick Links */}
           <div className="space-y-4">
-            <h4 className="text-sm sm:text-base font-black uppercase tracking-wider text-white">Navegación Rápida</h4>
+            <h4 className="text-sm sm:text-base font-black uppercase tracking-wider text-white">Quick Navigation</h4>
             <ul className="space-y-2.5 text-sm">
               <li>
                 <button onClick={onScrollToInventory} className="hover:text-[#67eb34] transition-colors cursor-pointer text-left font-medium">
-                  Catálogo de Vehículos en Stock
+                  In-Stock Vehicle Showroom
                 </button>
               </li>
               <li>
                 <a href="#financing" className="hover:text-[#67eb34] transition-colors font-medium">
-                  Calculadora y Leasing VIP
+                  Financial Simulator & VIP Lease
                 </a>
               </li>
               <li>
                 <a href="#services" className="hover:text-[#67eb34] transition-colors font-medium">
-                  Garantía 5 Años y Entrega a Domicilio
+                  5-Year Warranty & Enclosed Delivery
                 </a>
               </li>
               <li>
                 <a href="#reviews" className="hover:text-[#67eb34] transition-colors font-medium">
-                  Reseñas de Propietarios
+                  Owner Reviews & Testimonials
                 </a>
               </li>
               <li>
                 <button onClick={onOpenTestDriveModal} className="text-[#67eb34] font-bold hover:underline cursor-pointer">
-                  Agendar Test Drive en Circuito →
+                  Schedule Track Test Drive →
                 </button>
               </li>
             </ul>
@@ -121,7 +121,7 @@ export const Footer: React.FC<FooterProps> = ({
             <div className="space-y-3 text-sm text-slate-300">
               <div className="flex items-start gap-2.5">
                 <MapPin className="w-4 h-4 text-[#67eb34] shrink-0 mt-0.5" />
-                <span><strong>Madrid:</strong> Paseo de la Castellana 180, Experiencia Jarama.</span>
+                <span><strong>Madrid:</strong> Paseo de la Castellana 180, Jarama Track Experience.</span>
               </div>
               <div className="flex items-start gap-2.5">
                 <MapPin className="w-4 h-4 text-[#67eb34] shrink-0 mt-0.5" />
@@ -129,14 +129,14 @@ export const Footer: React.FC<FooterProps> = ({
               </div>
               <div className="flex items-start gap-2.5">
                 <MapPin className="w-4 h-4 text-[#67eb34] shrink-0 mt-0.5" />
-                <span><strong>CDMX:</strong> Campos Elíseos 204, Polanco Private VIP.</span>
+                <span><strong>Mexico City:</strong> Campos Elíseos 204, Polanco Private VIP.</span>
               </div>
             </div>
           </div>
 
           {/* Concierge Contact */}
           <div className="space-y-4">
-            <h4 className="text-sm sm:text-base font-black uppercase tracking-wider text-white">Atención Concierge 24/7</h4>
+            <h4 className="text-sm sm:text-base font-black uppercase tracking-wider text-white">24/7 Concierge Service</h4>
             <div className="space-y-2.5 text-sm">
               <div className="flex items-center gap-2.5">
                 <Phone className="w-4 h-4 text-[#67eb34]" />
@@ -151,7 +151,7 @@ export const Footer: React.FC<FooterProps> = ({
                 </a>
               </div>
               <p className="text-xs text-slate-400 pt-1 leading-relaxed">
-                Horario de atención física en salones: Lunes a Sábado de 09:00 a 20:00 (Cita previa recomendada).
+                Private lounge hours: Monday through Saturday 09:00 - 20:00 (By appointment only).
               </p>
             </div>
           </div>
@@ -160,12 +160,12 @@ export const Footer: React.FC<FooterProps> = ({
 
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-emerald-950/80 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400">
-          <p>© {new Date().getFullYear()} Velox Motors International S.L. Todos los derechos reservados.</p>
+          <p>© {new Date().getFullYear()} Velox Motors International Ltd. All rights reserved.</p>
           <div className="flex items-center gap-6">
-            <a href="#home" className="hover:text-slate-200">Aviso Legal</a>
-            <a href="#home" className="hover:text-slate-200">Política de Privacidad</a>
-            <a href="#home" className="hover:text-slate-200">Certificación de Emisiones</a>
-            <a href="#home" className="hover:text-slate-200">Cookies</a>
+            <a href="#home" className="hover:text-slate-200">Legal Notice</a>
+            <a href="#home" className="hover:text-slate-200">Privacy Policy</a>
+            <a href="#home" className="hover:text-slate-200">Emissions Certification</a>
+            <a href="#home" className="hover:text-slate-200">Cookie Preferences</a>
           </div>
         </div>
 

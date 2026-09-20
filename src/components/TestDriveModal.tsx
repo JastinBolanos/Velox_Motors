@@ -19,7 +19,7 @@ export const TestDriveModal: React.FC<TestDriveModalProps> = ({
   const [carId, setCarId] = useState<string>(preselectedCarId || CARS_DATA[0].id);
   const [location, setLocation] = useState<string>('madrid');
   const [date, setDate] = useState<string>('2026-09-25');
-  const [timeSlot, setTimeSlot] = useState<string>('11:00 AM - Circuito Privado');
+  const [timeSlot, setTimeSlot] = useState<string>('11:30 AM - Private Circuit Session');
   const [name, setName] = useState<string>('');
   const [email, setEmail] = useState<string>('');
   const [phone, setPhone] = useState<string>('');
@@ -66,38 +66,38 @@ export const TestDriveModal: React.FC<TestDriveModalProps> = ({
 
             <div>
               <span className="px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-300 text-xs font-semibold uppercase tracking-wider border border-emerald-500/30">
-                Pase de Prueba Confirmado
+                Test Drive Pass Confirmed
               </span>
               <h3 className="text-2xl sm:text-3xl font-extrabold text-white mt-2">
-                ¡Test Drive Agendado con Éxito!
+                Private Track Session Booked!
               </h3>
               <p className="text-sm text-slate-300 mt-2 max-w-md mx-auto">
-                Estimado/a <strong>{name}</strong>, hemos reservado tu sesión privada de prueba de manejo para el modelo:
+                Dear <strong>{name}</strong>, your private test drive session has been reserved for:
               </p>
             </div>
 
             {/* Appointment Ticket Badge */}
             <div className="p-4 rounded-2xl bg-[#020e07] border border-emerald-500/30 text-left max-w-md mx-auto space-y-2 text-xs">
               <div className="flex justify-between items-center pb-2 border-b border-emerald-950">
-                <span className="text-slate-400">Vehículo:</span>
+                <span className="text-slate-400">Vehicle:</span>
                 <span className="font-bold text-white text-sm">{selectedCar.name}</span>
               </div>
               <div className="flex justify-between items-center">
-                <span className="text-slate-400">Fecha y Horario:</span>
+                <span className="text-slate-400">Date & Time:</span>
                 <span className="font-semibold text-[#67eb34]">{date} • {timeSlot}</span>
               </div>
               <div className="flex justify-between items-center">
-                <span className="text-slate-400">Centro de Experiencia:</span>
+                <span className="text-slate-400">Experience Center:</span>
                 <span className="font-semibold text-white capitalize">{location} Experience Center</span>
               </div>
               <div className="flex justify-between items-center">
-                <span className="text-slate-400">ID de Cita:</span>
+                <span className="text-slate-400">Booking ID:</span>
                 <span className="font-mono text-emerald-400">VX-{Math.floor(100000 + Math.random() * 900000)}</span>
               </div>
             </div>
 
             <p className="text-[11px] text-slate-400 max-w-sm mx-auto">
-              Te hemos enviado los detalles y el pase de ingreso a tu correo <strong>{email}</strong>. Un piloto instructor de Velox Motors te estará esperando.
+              Confirmation details and access credentials have been sent to <strong>{email}</strong>. A Velox Motors certified test driver will welcome you upon arrival.
             </p>
 
             <button
@@ -105,7 +105,7 @@ export const TestDriveModal: React.FC<TestDriveModalProps> = ({
               onClick={handleReset}
               className="px-6 py-3 rounded-full bg-[#67eb34] text-black font-extrabold text-xs uppercase tracking-wider shadow-lg hover:bg-[#7bf04c] transition-all cursor-pointer"
             >
-              Volver al Salón de Autos
+              Return to Showroom
             </button>
           </div>
         ) : (
@@ -114,20 +114,20 @@ export const TestDriveModal: React.FC<TestDriveModalProps> = ({
             <div>
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-[11px] font-semibold text-[#67eb34] uppercase tracking-wider mb-2">
                 <Sparkles className="w-3.5 h-3.5" />
-                Experiencia en Pista o Ciudad
+                Track & Road VIP Experience
               </div>
               <h3 className="text-2xl font-extrabold text-white">
-                Agenda Tu Test Drive Privado
+                Schedule Your Private Test Drive
               </h3>
               <p className="text-xs text-slate-400 mt-1">
-                Siente la aceleración visceral y la ingeniería de precisión guiado por nuestros pilotos de prueba certificados.
+                Experience visceral acceleration and chassis precision guided by certified factory test drivers.
               </p>
             </div>
 
             {/* Car Selection */}
             <div className="space-y-1.5">
               <label className="text-xs font-bold text-slate-300 uppercase tracking-wider block">
-                Selecciona Vehículo a Probar
+                Select Vehicle to Test
               </label>
               <select
                 value={carId}
@@ -136,7 +136,7 @@ export const TestDriveModal: React.FC<TestDriveModalProps> = ({
               >
                 {CARS_DATA.map((car) => (
                   <option key={car.id} value={car.id}>
-                    {car.name} ({car.specs.horsepower} HP • 0-100 en {car.specs.acceleration0to100}s)
+                    {car.name} ({car.specs.horsepower} HP • 0-100 in {car.specs.acceleration0to100}s)
                   </option>
                 ))}
               </select>
@@ -145,9 +145,9 @@ export const TestDriveModal: React.FC<TestDriveModalProps> = ({
             {/* Center / Location Selection */}
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5">
               {[
-                { id: 'madrid', label: 'Madrid Experience Center', desc: 'Circuito del Jarama' },
-                { id: 'miami', label: 'Miami Flagship Showroom', desc: 'Waterfront Drive' },
-                { id: 'cdmx', label: 'CDMX Polanco Lounge', desc: 'Pista Autódromo' },
+                { id: 'madrid', label: 'Madrid Experience Center', desc: 'Jarama Private Circuit' },
+                { id: 'miami', label: 'Miami Flagship Showroom', desc: 'Waterfront Highway Run' },
+                { id: 'cdmx', label: 'CDMX Polanco Lounge', desc: 'Autódromo Track Course' },
               ].map((loc) => (
                 <button
                   key={loc.id}
@@ -168,7 +168,7 @@ export const TestDriveModal: React.FC<TestDriveModalProps> = ({
             {/* Date and Time Slot */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               <div className="space-y-1.5">
-                <label className="text-xs font-semibold text-slate-300 block">Fecha Preferida</label>
+                <label className="text-xs font-semibold text-slate-300 block">Preferred Date</label>
                 <div className="relative">
                   <Calendar className="w-4 h-4 text-emerald-500 absolute left-3 top-1/2 -translate-y-1/2" />
                   <input
@@ -182,7 +182,7 @@ export const TestDriveModal: React.FC<TestDriveModalProps> = ({
               </div>
 
               <div className="space-y-1.5">
-                <label className="text-xs font-semibold text-slate-300 block">Horario & Modalidad</label>
+                <label className="text-xs font-semibold text-slate-300 block">Time & Experience Mode</label>
                 <div className="relative">
                   <Clock className="w-4 h-4 text-emerald-500 absolute left-3 top-1/2 -translate-y-1/2" />
                   <select
@@ -190,10 +190,10 @@ export const TestDriveModal: React.FC<TestDriveModalProps> = ({
                     onChange={(e) => setTimeSlot(e.target.value)}
                     className="w-full pl-9 pr-3 py-2 rounded-xl bg-[#020d07] border border-emerald-900/70 text-xs text-white focus:outline-none focus:border-[#67eb34] cursor-pointer"
                   >
-                    <option value="10:00 AM - Prueba Urbana VIP">10:00 AM - Prueba Urbana VIP</option>
-                    <option value="11:30 AM - Circuito Privado">11:30 AM - Circuito Privado</option>
-                    <option value="03:00 PM - Prueba en Autovía">03:00 PM - Prueba en Autovía</option>
-                    <option value="05:30 PM - Golden Hour Circuit">05:30 PM - Golden Hour Circuit</option>
+                    <option value="10:00 AM - VIP Urban Run">10:00 AM - VIP Urban Run</option>
+                    <option value="11:30 AM - Private Circuit Session">11:30 AM - Private Circuit Session</option>
+                    <option value="03:00 PM - Highway Dynamic Test">03:00 PM - Highway Dynamic Test</option>
+                    <option value="05:30 PM - Golden Hour Track Run">05:30 PM - Golden Hour Track Run</option>
                   </select>
                 </div>
               </div>
@@ -202,11 +202,11 @@ export const TestDriveModal: React.FC<TestDriveModalProps> = ({
             {/* Personal Details */}
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
               <div className="space-y-1.5">
-                <label className="text-xs font-semibold text-slate-300 block">Nombre Completo</label>
+                <label className="text-xs font-semibold text-slate-300 block">Full Name</label>
                 <input
                   type="text"
                   required
-                  placeholder="Ej. Carlos Mendoza"
+                  placeholder="e.g. Alexander Wright"
                   value={name}
                   onChange={(e) => setName(e.target.value)}
                   className="w-full px-3 py-2 rounded-xl bg-[#020d07] border border-emerald-900/70 text-xs text-white placeholder-slate-500 focus:outline-none focus:border-[#67eb34]"
@@ -214,11 +214,11 @@ export const TestDriveModal: React.FC<TestDriveModalProps> = ({
               </div>
 
               <div className="space-y-1.5">
-                <label className="text-xs font-semibold text-slate-300 block">Correo Electrónico</label>
+                <label className="text-xs font-semibold text-slate-300 block">Email Address</label>
                 <input
                   type="email"
                   required
-                  placeholder="carlos@empresa.com"
+                  placeholder="alex@company.com"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   className="w-full px-3 py-2 rounded-xl bg-[#020d07] border border-emerald-900/70 text-xs text-white placeholder-slate-500 focus:outline-none focus:border-[#67eb34]"
@@ -226,11 +226,11 @@ export const TestDriveModal: React.FC<TestDriveModalProps> = ({
               </div>
 
               <div className="space-y-1.5">
-                <label className="text-xs font-semibold text-slate-300 block">Teléfono / WhatsApp</label>
+                <label className="text-xs font-semibold text-slate-300 block">Phone / Mobile</label>
                 <input
                   type="tel"
                   required
-                  placeholder="+34 600 000 000"
+                  placeholder="+1 (555) 019-2834"
                   value={phone}
                   onChange={(e) => setPhone(e.target.value)}
                   className="w-full px-3 py-2 rounded-xl bg-[#020d07] border border-emerald-900/70 text-xs text-white placeholder-slate-500 focus:outline-none focus:border-[#67eb34]"
@@ -248,7 +248,7 @@ export const TestDriveModal: React.FC<TestDriveModalProps> = ({
                 className="w-4 h-4 rounded accent-[#67eb34] cursor-pointer"
               />
               <label htmlFor="license-check" className="text-xs text-slate-300 cursor-pointer">
-                Declaro tener licencia de conducir vigente y ser mayor de 21 años para pruebas en circuito.
+                I confirm that I hold a valid driver's license and meet the age requirements (21+) for track driving.
               </label>
             </div>
 
@@ -265,7 +265,7 @@ export const TestDriveModal: React.FC<TestDriveModalProps> = ({
               whileTap={licenseConfirmed ? { scale: 0.95 } : {}}
               className="w-full py-3.5 rounded-full bg-gradient-to-r from-[#67eb34] via-[#4ade80] to-[#22c55e] disabled:opacity-50 text-black font-extrabold text-xs uppercase tracking-wider transition-all shadow-[0_0_20px_rgba(103,235,52,0.4)] cursor-pointer"
             >
-              Confirmar Reserva de Test Drive Privado →
+              Confirm Private Test Drive Reservation →
             </motion.button>
           </form>
         )}

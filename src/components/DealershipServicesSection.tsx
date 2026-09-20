@@ -29,13 +29,13 @@ export const DealershipServicesSection: React.FC<DealershipServicesSectionProps>
       <div className="text-center max-w-4xl mx-auto mb-16">
         <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-emerald-500/15 border border-emerald-500/40 text-xs sm:text-sm font-bold text-[#67eb34] uppercase tracking-wider mb-4">
           <Shield className="w-4 h-4" />
-          Excelencia y Atención Concierge
+          Concierge Excellence & Dedicated Care
         </div>
         <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight">
-          Servicios VIP para <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#67eb34] via-[#86efac] to-emerald-400">Propietarios Velox</span>
+          VIP Services for <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#67eb34] via-[#86efac] to-emerald-400">Velox Owners</span>
         </h2>
         <p className="text-slate-300 text-base sm:text-lg lg:text-xl mt-3 leading-relaxed">
-          Comprar un automóvil en Velox Motors es el inicio de una experiencia de propiedad exclusiva, sin fricciones y con soporte 24/7 en cualquier país.
+          Acquiring a vehicle at Velox Motors is the beginning of an effortless, bespoke ownership journey backed by 24/7 global support.
         </p>
       </div>
 

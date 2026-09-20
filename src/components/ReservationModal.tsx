@@ -55,33 +55,33 @@ export const ReservationModal: React.FC<ReservationModalProps> = ({
             </div>
 
             <h3 className="text-2xl font-black text-white">
-              ¡Unidad Reservada en Exclusiva!
+              Unit Exclusively Secured!
             </h3>
             <p className="text-sm text-slate-300">
-              Hemos bloqueado el número de chasis (VIN) de tu <strong>{car.name}</strong> durante 7 días hábiles a nombre de <strong>{name}</strong>.
+              We have locked the VIN chassis number of your <strong>{car.name}</strong> for 7 business days under the name of <strong>{name}</strong>.
             </p>
 
             <div className="p-4 rounded-xl bg-[#020e07] border border-emerald-500/30 text-xs space-y-2 text-left">
               <div className="flex justify-between">
-                <span className="text-slate-400">Modelo:</span>
+                <span className="text-slate-400">Model:</span>
                 <span className="font-bold text-white">{car.name}</span>
               </div>
               <div className="flex justify-between">
-                <span className="text-slate-400">Precio de Venta:</span>
+                <span className="text-slate-400">List Price:</span>
                 <span className="font-mono text-[#67eb34] font-bold">${car.priceUSD.toLocaleString()} USD</span>
               </div>
               <div className="flex justify-between">
-                <span className="text-slate-400">Depósito en Garantía (Reembolsable):</span>
+                <span className="text-slate-400">Holding Escrow Deposit (Refundable):</span>
                 <span className="font-mono text-white">${reservationDeposit.toLocaleString()} USD</span>
               </div>
               <div className="flex justify-between">
-                <span className="text-slate-400">Ciudad de Entrega VIP:</span>
+                <span className="text-slate-400">Destination City (Enclosed Freight):</span>
                 <span className="text-white">{deliveryCity}</span>
               </div>
             </div>
 
             <p className="text-xs text-emerald-400 font-medium">
-              Tu Asesor Privado Concierge te llamará en breve al {phone} para coordinar la inspección técnica o entrega a domicilio.
+              Your Private Concierge Advisor will contact you shortly at {phone} to coordinate technical inspection or enclosed home delivery.
             </p>
 
             <button
@@ -89,7 +89,7 @@ export const ReservationModal: React.FC<ReservationModalProps> = ({
               onClick={onClose}
               className="px-6 py-2.5 rounded-full bg-[#67eb34] text-black font-bold text-xs uppercase cursor-pointer"
             >
-              Entendido, Cerrar
+              Close & Acknowledge
             </button>
           </div>
         ) : (
@@ -97,13 +97,13 @@ export const ReservationModal: React.FC<ReservationModalProps> = ({
             <div>
               <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/10 text-[11px] font-bold text-[#67eb34] uppercase tracking-wider border border-emerald-500/30 mb-2">
                 <Lock className="w-3.5 h-3.5" />
-                Bloqueo Oficial de Chasis
+                Official Chassis Allocation Lock
               </div>
               <h3 className="text-2xl font-black text-white">
-                Reservar {car.name}
+                Reserve {car.name}
               </h3>
               <p className="text-xs text-slate-400 mt-1">
-                Asegura esta unidad exclusiva antes de que sea adquirida por otro coleccionista. Depósito 100% reembolsable en 14 días.
+                Secure this rare allocation before it is acquired by another collector. 100% refundable escrow deposit within 14 days.
               </p>
             </div>
 
@@ -117,11 +117,11 @@ export const ReservationModal: React.FC<ReservationModalProps> = ({
 
             <div className="space-y-3">
               <div>
-                <label className="text-xs font-semibold text-slate-300 block mb-1">Nombre Completo del Titular</label>
+                <label className="text-xs font-semibold text-slate-300 block mb-1">Full Legal Name</label>
                 <input
                   type="text"
                   required
-                  placeholder="Ej. Santiago De La Torre"
+                  placeholder="e.g. Santiago De La Torre"
                   value={name}
                   onChange={(e) => setName(e.target.value)}
                   className="w-full px-3.5 py-2.5 rounded-xl bg-[#020d07] border border-emerald-900/70 text-xs text-white placeholder-slate-500 focus:outline-none focus:border-[#67eb34]"
@@ -130,7 +130,7 @@ export const ReservationModal: React.FC<ReservationModalProps> = ({
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 <div>
-                  <label className="text-xs font-semibold text-slate-300 block mb-1">Correo Electrónico</label>
+                  <label className="text-xs font-semibold text-slate-300 block mb-1">Email Address</label>
                   <input
                     type="email"
                     required
@@ -141,11 +141,11 @@ export const ReservationModal: React.FC<ReservationModalProps> = ({
                   />
                 </div>
                 <div>
-                  <label className="text-xs font-semibold text-slate-300 block mb-1">Teléfono Directo</label>
+                  <label className="text-xs font-semibold text-slate-300 block mb-1">Direct Phone / Mobile</label>
                   <input
                     type="tel"
                     required
-                    placeholder="+34 650 000 000"
+                    placeholder="+1 (555) 304-9821"
                     value={phone}
                     onChange={(e) => setPhone(e.target.value)}
                     className="w-full px-3.5 py-2.5 rounded-xl bg-[#020d07] border border-emerald-900/70 text-xs text-white placeholder-slate-500 focus:outline-none focus:border-[#67eb34]"
@@ -154,11 +154,11 @@ export const ReservationModal: React.FC<ReservationModalProps> = ({
               </div>
 
               <div>
-                <label className="text-xs font-semibold text-slate-300 block mb-1">Ciudad para Entrega en Remolque Cerrado</label>
+                <label className="text-xs font-semibold text-slate-300 block mb-1">City for Enclosed Climate-Controlled Freight</label>
                 <input
                   type="text"
                   required
-                  placeholder="Ej. Madrid, Barcelona, Miami, Ciudad de México..."
+                  placeholder="e.g. Miami, Los Angeles, London, Madrid, Mexico City..."
                   value={deliveryCity}
                   onChange={(e) => setDeliveryCity(e.target.value)}
                   className="w-full px-3.5 py-2.5 rounded-xl bg-[#020d07] border border-emerald-900/70 text-xs text-white placeholder-slate-500 focus:outline-none focus:border-[#67eb34]"
@@ -168,7 +168,7 @@ export const ReservationModal: React.FC<ReservationModalProps> = ({
 
             <div className="p-3 rounded-xl bg-emerald-950/40 border border-emerald-800/40 flex items-center gap-2.5 text-xs text-emerald-300">
               <ShieldCheck className="w-5 h-5 text-[#67eb34] shrink-0" />
-              <span>Garantía de Satisfacción Velox: Si tras inspeccionar el vehículo no es de tu agrado, se reembolsa el 100% de inmediato.</span>
+              <span>Velox Satisfaction Guarantee: If after personal inspection the car does not meet your standard, 100% of your deposit is refunded immediately.</span>
             </div>
 
             <motion.button
@@ -182,7 +182,7 @@ export const ReservationModal: React.FC<ReservationModalProps> = ({
               whileTap={{ scale: 0.95 }}
               className="w-full py-3.5 rounded-full bg-gradient-to-r from-[#67eb34] via-[#4ade80] to-[#22c55e] text-black font-extrabold text-xs uppercase tracking-wider transition-all shadow-[0_0_20px_rgba(103,235,52,0.4)] cursor-pointer"
             >
-              Completar Solicitud de Reserva VIP →
+              Complete VIP Allocation Request →
             </motion.button>
           </form>
         )}

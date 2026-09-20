@@ -36,12 +36,12 @@ export const Navbar: React.FC<NavbarProps> = ({
               className="text-[#67eb34] font-bold transition-colors hover:text-[#7bf04c]"
               id="nav-link-home"
             >
-              Inicio
+              Home
             </a>
             <span className="absolute bottom-0 left-0 w-full h-[2px] bg-[#67eb34] shadow-[0_0_8px_#67eb34] rounded-full" />
           </div>
 
-          {/* Inventario with Hover Dropdown */}
+          {/* Inventory with Hover Dropdown */}
           <div 
             className="relative py-1.5"
             onMouseEnter={() => setInventoryDropdownOpen(true)}
@@ -54,7 +54,7 @@ export const Navbar: React.FC<NavbarProps> = ({
               id="nav-dropdown-inventory"
               aria-expanded={inventoryDropdownOpen}
             >
-              <span>Inventario Exclusivo</span>
+              <span>Exclusive Inventory</span>
               <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-200 text-slate-400 ${inventoryDropdownOpen ? 'rotate-180 text-[#67eb34]' : ''}`} />
             </button>
 
@@ -75,9 +75,9 @@ export const Navbar: React.FC<NavbarProps> = ({
                     >
                       <div className="flex items-center gap-2">
                         <Sparkles className="w-4 h-4 text-[#67eb34]" />
-                        <span className="font-bold">Ver Todo el Stock</span>
+                        <span className="font-bold">Explore Entire Showroom</span>
                       </div>
-                      <span className="text-[10px] bg-emerald-500/20 text-[#67eb34] border border-emerald-500/40 px-2 py-0.5 rounded-full font-mono font-bold">8 Autos</span>
+                      <span className="text-[10px] bg-emerald-500/20 text-[#67eb34] border border-emerald-500/40 px-2 py-0.5 rounded-full font-mono font-bold">8 Cars</span>
                     </button>
 
                     <button
@@ -92,7 +92,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                       onClick={() => { onScrollToInventory(); setInventoryDropdownOpen(false); }}
                       className="w-full text-left px-3 py-2 rounded-lg text-xs text-slate-200 hover:text-[#67eb34] hover:bg-emerald-950/70 transition-colors flex items-center justify-between cursor-pointer"
                     >
-                      <span>Superdeportivos Eléctricos</span>
+                      <span>Electric Supercars</span>
                       <span className="text-[10px] text-emerald-400 font-mono">800V Ultra</span>
                     </button>
 
@@ -100,8 +100,8 @@ export const Navbar: React.FC<NavbarProps> = ({
                       onClick={() => { onScrollToInventory(); setInventoryDropdownOpen(false); }}
                       className="w-full text-left px-3 py-2 rounded-lg text-xs text-slate-200 hover:text-[#67eb34] hover:bg-emerald-950/70 transition-colors flex items-center justify-between cursor-pointer"
                     >
-                      <span>Prototipos Futuristas</span>
-                      <span className="text-[10px] text-amber-400 font-mono">Limitada</span>
+                      <span>Futuristic Prototypes</span>
+                      <span className="text-[10px] text-amber-400 font-mono">Limited</span>
                     </button>
                   </div>
                 </motion.div>
@@ -109,19 +109,19 @@ export const Navbar: React.FC<NavbarProps> = ({
             </AnimatePresence>
           </div>
 
-          {/* Financiamiento */}
+          {/* Financing */}
           <a href="#financing" className="hover:text-[#67eb34] transition-colors" id="nav-link-financing">
-            Simulador de Cuotas
+            Payment Calculator
           </a>
 
-          {/* Servicios VIP */}
+          {/* VIP Services */}
           <a href="#services" className="hover:text-[#67eb34] transition-colors" id="nav-link-services">
-            Servicios VIP
+            VIP Services
           </a>
 
-          {/* Reseñas / Clientes */}
+          {/* Reviews / Clients */}
           <a href="#reviews" className="hover:text-[#67eb34] transition-colors" id="nav-link-reviews">
-            Opiniones de Clientes
+            Collector Reviews
           </a>
         </nav>
 
@@ -134,7 +134,7 @@ export const Navbar: React.FC<NavbarProps> = ({
             </div>
             <div className="flex flex-col">
               <span className="text-[10px] text-emerald-300 font-bold tracking-wider uppercase leading-none">
-                Concierge Privado 24/7
+                24/7 Private Concierge
               </span>
               <a 
                 href="tel:18008356968" 
@@ -169,7 +169,7 @@ export const Navbar: React.FC<NavbarProps> = ({
             <span className="absolute inset-0 w-1/2 h-full bg-gradient-to-r from-transparent via-white/40 to-transparent -skew-x-12 animate-sheen pointer-events-none" />
 
             <Calendar className="w-3.5 h-3.5 text-black stroke-[2.5] relative z-10" />
-            <span className="relative z-10">Agendar Test Drive</span>
+            <span className="relative z-10">Schedule Test Drive</span>
             <div className="relative z-10 w-4.5 h-4.5 rounded-full bg-black/15 flex items-center justify-center group-hover:bg-black/25 group-hover:scale-105 transition-transform">
               <ArrowRight className="w-2.5 h-2.5 text-black stroke-[3] group-hover:translate-x-0.5 transition-transform" />
             </div>
@@ -216,34 +216,34 @@ export const Navbar: React.FC<NavbarProps> = ({
                 onClick={() => setMobileMenuOpen(false)} 
                 className="block text-[#67eb34] font-bold py-1"
               >
-                Inicio
+                Home
               </a>
               <button 
                 onClick={() => { setMobileMenuOpen(false); onScrollToInventory(); }} 
                 className="w-full text-left text-slate-100 hover:text-[#67eb34] font-semibold py-1"
               >
-                Inventario de Autos (8 Modelos en Stock)
+                Showroom Inventory (8 In Stock)
               </button>
               <a 
                 href="#financing" 
                 onClick={() => setMobileMenuOpen(false)} 
                 className="block text-slate-100 hover:text-[#67eb34] font-semibold py-1"
               >
-                Calculadora Financiera
+                Payment Calculator
               </a>
               <a 
                 href="#services" 
                 onClick={() => setMobileMenuOpen(false)} 
                 className="block text-slate-100 hover:text-[#67eb34] font-semibold py-1"
               >
-                Servicios & Garantía VIP
+                VIP Services & Warranty
               </a>
               <a 
                 href="#reviews" 
                 onClick={() => setMobileMenuOpen(false)} 
                 className="block text-slate-100 hover:text-[#67eb34] font-semibold py-1"
               >
-                Opiniones de Clientes
+                Collector Reviews
               </a>
             </div>
 
@@ -256,7 +256,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                 onClick={() => { setMobileMenuOpen(false); onOpenTestDriveModal(); }}
                 className="px-6 py-3 rounded-full bg-[#67eb34] text-black font-black text-xs shadow-lg uppercase tracking-wider"
               >
-                Agendar Cita VIP
+                Book VIP Session
               </button>
             </div>
           </motion.div>

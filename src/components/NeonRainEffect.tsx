@@ -493,7 +493,7 @@ export const NeonRainEffect: React.FC<NeonRainEffectProps> = ({ defaultIntensity
             whileHover={{ scale: 1.05, y: -1 }}
             whileTap={{ scale: 0.95 }}
             className="flex items-center gap-2 px-3.5 py-2 rounded-full bg-[#031d10]/95 border border-emerald-500/50 hover:border-[#67eb34] text-white shadow-[0_0_20px_rgba(103,235,52,0.35)] backdrop-blur-xl transition-all cursor-pointer group"
-            title="Ajustar Lluvia Cyber Verde Velox"
+            title="Adjust Velox Cyber Rain FX"
           >
             <div className="relative flex items-center justify-center">
               <span className={`w-2 h-2 rounded-full ${isEnabled ? 'bg-[#67eb34] shadow-[0_0_8px_#67eb34]' : 'bg-slate-600'} transition-colors`} />
@@ -504,9 +504,9 @@ export const NeonRainEffect: React.FC<NeonRainEffectProps> = ({ defaultIntensity
             
             <div className="flex items-center gap-1.5 text-xs font-bold font-mono tracking-wider">
               <Sparkles className="w-3 h-3 text-[#67eb34] group-hover:rotate-12 transition-transform" />
-              <span className="text-slate-300 hidden sm:inline">LLUVIA:</span>
+              <span className="text-slate-300 hidden sm:inline">RAIN:</span>
               <span className="text-[#67eb34] uppercase font-extrabold">
-                {!isEnabled ? 'OFF' : intensity === 'intense' ? 'INTENSA' : intensity === 'elegant' ? 'ELEGANTE' : 'SUAVE'}
+                {!isEnabled ? 'OFF' : intensity === 'intense' ? 'INTENSE' : intensity === 'elegant' ? 'ELEGANT' : 'SUBTLE'}
               </span>
             </div>
             <Sliders className="w-3 h-3 text-slate-400 group-hover:text-emerald-300 transition-colors" />
@@ -525,7 +525,7 @@ export const NeonRainEffect: React.FC<NeonRainEffectProps> = ({ defaultIntensity
                 <div className="flex items-center justify-between pb-2.5 border-b border-emerald-900/60 mb-2.5">
                   <span className="text-xs font-black text-white uppercase tracking-wider flex items-center gap-1.5">
                     <Sparkles className="w-3.5 h-3.5 text-[#67eb34]" />
-                    Atmósfera Cyber Neón
+                    Cyber Neon Atmosphere
                   </span>
                   <button
                     type="button"
@@ -537,17 +537,17 @@ export const NeonRainEffect: React.FC<NeonRainEffectProps> = ({ defaultIntensity
                     }`}
                   >
                     {isEnabled ? <Eye className="w-3 h-3" /> : <EyeOff className="w-3 h-3" />}
-                    <span>{isEnabled ? 'Activa' : 'Pausa'}</span>
+                    <span>{isEnabled ? 'Active' : 'Paused'}</span>
                   </button>
                 </div>
 
                 <p className="text-[10px] text-slate-300 leading-relaxed mb-2.5">
-                  Haces cinemáticos esmeralda y lima neón optimizados por GPU a 60/120 FPS sin caída de rendimiento.
+                  GPU-accelerated cinematic streaks in electric emerald and neon lime running at 60/120 FPS.
                 </p>
 
                 <div className="space-y-1">
                   <label className="text-[10px] text-slate-400 uppercase font-bold tracking-wider">
-                    Intensidad Visual
+                    Visual Intensity
                   </label>
                   <div className="grid grid-cols-3 gap-1">
                     {(['intense', 'elegant', 'subtle'] as RainIntensity[]).map((mode) => (
@@ -564,7 +564,7 @@ export const NeonRainEffect: React.FC<NeonRainEffectProps> = ({ defaultIntensity
                             : 'bg-[#041d10] border-emerald-950 text-slate-400 hover:text-white hover:border-emerald-700'
                         }`}
                       >
-                        {mode === 'intense' ? '⚡ Intensa' : mode === 'elegant' ? '✨ Elegante' : '🍃 Suave'}
+                        {mode === 'intense' ? '⚡ Intense' : mode === 'elegant' ? '✨ Elegant' : '🍃 Subtle'}
                       </button>
                     ))}
                   </div>

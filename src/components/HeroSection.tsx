@@ -123,7 +123,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
             {/* Stat 2: Potencia HP */}
             <div className="flex flex-col px-3 sm:px-4 py-2 sm:py-3 sm:border-r border-emerald-900/60">
               <span className="text-xs sm:text-sm text-slate-300 uppercase font-bold tracking-wider flex items-center gap-2">
-                <Gauge className="w-4 h-4 sm:w-4.5 sm:h-4.5 text-[#67eb34]" /> Potencia
+                <Gauge className="w-4 h-4 sm:w-4.5 sm:h-4.5 text-[#67eb34]" /> Power
               </span>
               <span className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-black text-white font-mono mt-1.5 sm:mt-2">
                 {currentCar.specs.horsepower} <span className="text-sm sm:text-base font-bold text-emerald-400">HP</span>
@@ -134,24 +134,24 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
             {/* Stat 3: Velocidad Máx */}
             <div className="flex flex-col px-3 sm:px-4 py-2 sm:py-3 border-r border-emerald-900/60">
               <span className="text-xs sm:text-sm text-slate-300 uppercase font-bold tracking-wider flex items-center gap-2">
-                <Sparkles className="w-4 h-4 sm:w-4.5 sm:h-4.5 text-[#67eb34]" /> V. Máxima
+                <Sparkles className="w-4 h-4 sm:w-4.5 sm:h-4.5 text-[#67eb34]" /> Top Speed
               </span>
               <span className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-black text-white font-mono mt-1.5 sm:mt-2">
                 {currentCar.specs.topSpeed} <span className="text-sm sm:text-base font-normal text-slate-300">km/h</span>
               </span>
-              <span className="text-xs text-slate-300 mt-1 font-medium">Pista / Autovía</span>
+              <span className="text-xs text-slate-300 mt-1 font-medium">Track / Autobahn</span>
             </div>
 
             {/* Stat 4: Precio USD */}
             <div className="flex flex-col px-3.5 sm:px-4 py-2 sm:py-3 bg-emerald-950/80 rounded-xl sm:rounded-2xl border border-emerald-500/40">
               <span className="text-xs sm:text-sm text-emerald-300 font-bold uppercase tracking-wider">
-                Precio Entrega
+                Delivered Price
               </span>
               <span className="text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-black text-[#67eb34] font-mono mt-1.5 sm:mt-2 drop-shadow-[0_0_12px_rgba(103,235,52,0.35)]">
                 ${currentCar.priceUSD.toLocaleString()}
               </span>
               <span className="text-xs sm:text-sm text-slate-200 mt-1 font-semibold truncate">
-                o ${currentCar.monthlyLeaseEst.toLocaleString()}/mes
+                or ${currentCar.monthlyLeaseEst.toLocaleString()}/mo lease
               </span>
             </div>
           </motion.div>
@@ -184,7 +184,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
               <span className="absolute inset-0 w-1/2 h-full bg-gradient-to-r from-transparent via-white/40 to-transparent -skew-x-12 animate-sheen pointer-events-none" />
 
               <Calendar className="w-5 h-5 text-black stroke-[2.5]" />
-              <span className="relative z-10">Agendar Prueba de Manejo</span>
+              <span className="relative z-10">Book VIP Test Drive</span>
               <div className="relative z-10 w-6 h-6 rounded-full bg-black/15 flex items-center justify-center group-hover:bg-black/25 transition-colors">
                 <ArrowRight className="w-3.5 h-3.5 text-black stroke-[3] group-hover:translate-x-0.5 transition-transform" />
               </div>
@@ -211,7 +211,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
               className="relative overflow-hidden inline-flex items-center justify-center gap-2.5 px-6 sm:px-7 py-3.5 sm:py-4 rounded-full bg-[#072d17]/95 hover:bg-[#0e4b26] border border-emerald-500/70 text-white font-bold text-sm sm:text-base transition-colors duration-200 cursor-pointer backdrop-blur-xl shadow-lg"
             >
               <Eye className="w-5 h-5 text-[#67eb34]" />
-              <span>Ficha Técnica & Colores</span>
+              <span>Technical Specs & Paint</span>
             </motion.button>
 
             {/* CTA 3: Ver Todo el Inventario */}
@@ -224,7 +224,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
               transition={{ type: "spring", stiffness: 450, damping: 18 }}
               className="text-sm sm:text-base font-bold text-slate-100 hover:text-[#67eb34] transition-colors inline-flex items-center gap-2 py-3 px-3.5 rounded-full hover:bg-emerald-950/50 cursor-pointer"
             >
-              <span>Ver los 8 autos en stock</span>
+              <span>Explore all 8 cars in stock</span>
               <ChevronRight className="w-4 h-4" />
             </motion.button>
           </div>
@@ -236,10 +236,10 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
             <div className="flex items-center justify-between mb-4">
               <span className="text-sm sm:text-base font-black text-slate-100 uppercase tracking-wider flex items-center gap-2">
                 <Sparkles className="w-4 h-4 text-[#67eb34]" />
-                Selecciona Modelo Destacado:
+                Select Featured Flagship:
               </span>
               <span className="text-xs sm:text-sm text-emerald-400 font-mono font-bold">
-                {activeCarIndex + 1} de {heroCars.length} unidades insignia
+                {activeCarIndex + 1} of {heroCars.length} flagship units
               </span>
             </div>
 

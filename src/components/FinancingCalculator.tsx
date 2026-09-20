@@ -69,13 +69,13 @@ export const FinancingCalculator: React.FC<FinancingCalculatorProps> = ({
         <div className="max-w-3xl mb-8">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/15 border border-emerald-500/40 text-xs font-bold text-[#67eb34] uppercase tracking-wider mb-3">
             <Calculator className="w-3.5 h-3.5" />
-            Financiamiento & Leasing VIP
+            VIP Financing & Leasing
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight">
-            Simulador de <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#67eb34] via-[#86efac] to-emerald-400">Cuotas a Medida</span>
+            Tailored <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#67eb34] via-[#86efac] to-emerald-400">Payment Simulator</span>
           </h2>
           <p className="text-slate-300 text-xs sm:text-sm md:text-base mt-2 leading-relaxed">
-            Configura tu plan de adquisición personalizado con tasas de interés exclusivas desde 4.9% TAE, aprobación exprés en 24 horas y sin penalización por liquidación anticipada.
+            Configure your bespoke acquisition structure with preferential interest rates from 4.9% APR, express 24-hour approval, and zero early settlement penalties.
           </p>
         </div>
 
@@ -88,7 +88,7 @@ export const FinancingCalculator: React.FC<FinancingCalculatorProps> = ({
             {/* Vehicle Selector */}
             <div className="space-y-2">
               <label className="text-xs font-black text-slate-200 uppercase tracking-wider block">
-                Selecciona Vehículo del Inventario
+                Select Vehicle from Inventory
               </label>
               <select
                 value={selectedCarId}
@@ -106,7 +106,7 @@ export const FinancingCalculator: React.FC<FinancingCalculatorProps> = ({
             {/* Price Slider */}
             <div className="space-y-2.5 bg-[#021008] p-4 sm:p-4.5 rounded-xl border border-emerald-950">
               <div className="flex justify-between items-center">
-                <span className="font-bold text-slate-200 text-xs sm:text-sm">Valor Total del Auto</span>
+                <span className="font-bold text-slate-200 text-xs sm:text-sm">Vehicle Total Price</span>
                 <span className="font-mono text-base sm:text-lg font-black text-white">
                   ${customPrice.toLocaleString()} USD
                 </span>
@@ -130,7 +130,7 @@ export const FinancingCalculator: React.FC<FinancingCalculatorProps> = ({
             {/* Down Payment % Slider */}
             <div className="space-y-2.5 bg-[#021008] p-4 sm:p-4.5 rounded-xl border border-emerald-950">
               <div className="flex justify-between items-center">
-                <span className="font-bold text-slate-200 text-xs sm:text-sm">Enganche / Pago Inicial ({downPaymentPercent}%)</span>
+                <span className="font-bold text-slate-200 text-xs sm:text-sm">Down Payment ({downPaymentPercent}%)</span>
                 <span className="font-mono text-sm sm:text-base font-black text-[#67eb34]">
                   ${calculations.downPaymentAmount.toLocaleString()} USD
                 </span>
@@ -145,8 +145,8 @@ export const FinancingCalculator: React.FC<FinancingCalculatorProps> = ({
                 className="w-full h-2.5 bg-emerald-950 rounded-lg appearance-none cursor-pointer accent-[#67eb34]"
               />
               <div className="flex justify-between text-[10px] text-slate-400 font-mono font-semibold">
-                <span>10% (Mínimo)</span>
-                <span>30% (Recomendado)</span>
+                <span>10% (Minimum)</span>
+                <span>30% (Recommended)</span>
                 <span>60%</span>
               </div>
             </div>
@@ -154,7 +154,7 @@ export const FinancingCalculator: React.FC<FinancingCalculatorProps> = ({
             {/* Term Months Selector Buttons */}
             <div className="space-y-2">
               <label className="text-xs font-black text-slate-200 uppercase tracking-wider block">
-                Plazo de Financiamiento
+                Financing Term
               </label>
               <div className="grid grid-cols-4 gap-2">
                 {[24, 36, 48, 60].map((months) => (
@@ -170,7 +170,7 @@ export const FinancingCalculator: React.FC<FinancingCalculatorProps> = ({
                         : 'bg-[#020e07] hover:bg-[#062413] border border-emerald-900/60 text-slate-200'
                     }`}
                   >
-                    {months} Meses
+                    {months} Months
                   </motion.button>
                 ))}
               </div>
@@ -180,19 +180,19 @@ export const FinancingCalculator: React.FC<FinancingCalculatorProps> = ({
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 pt-2">
               <div className="flex items-start gap-2.5 text-xs text-slate-200">
                 <CheckCircle2 className="w-4 h-4 text-[#67eb34] shrink-0 mt-0.5" />
-                <span>Tasa fija preferencial 4.9% anual congelada</span>
+                <span>Fixed preferential 4.9% annual APR lock</span>
               </div>
               <div className="flex items-start gap-2.5 text-xs text-slate-200">
                 <CheckCircle2 className="w-4 h-4 text-[#67eb34] shrink-0 mt-0.5" />
-                <span>0% de comisión por apertura en unidades stock</span>
+                <span>0% origination fee on in-stock vehicles</span>
               </div>
               <div className="flex items-start gap-2.5 text-xs text-slate-200">
                 <CheckCircle2 className="w-4 h-4 text-[#67eb34] shrink-0 mt-0.5" />
-                <span>Seguro a todo riesgo bonificado primer año</span>
+                <span>Comprehensive premium insurance included for Year 1</span>
               </div>
               <div className="flex items-start gap-2.5 text-xs text-slate-200">
                 <CheckCircle2 className="w-4 h-4 text-[#67eb34] shrink-0 mt-0.5" />
-                <span>Posibilidad de canje por modelo nuevo a los 24 meses</span>
+                <span>Upgrade trade-in option for new model at 24 months</span>
               </div>
             </div>
 
@@ -203,10 +203,10 @@ export const FinancingCalculator: React.FC<FinancingCalculatorProps> = ({
             
             <div className="flex items-center justify-between pb-4 border-b border-emerald-800/50">
               <span className="text-xs font-black uppercase tracking-wider text-emerald-300">
-                Cuota Mensual Estimada
+                Estimated Monthly Payment
               </span>
               <span className="px-2.5 py-0.5 rounded-full text-[11px] font-black bg-[#67eb34]/25 text-[#67eb34] border border-[#67eb34]/40">
-                Aprobación en 24h
+                24h Express Approval
               </span>
             </div>
 
@@ -216,34 +216,34 @@ export const FinancingCalculator: React.FC<FinancingCalculatorProps> = ({
                 <span className="text-3xl sm:text-4xl lg:text-5xl font-black text-white font-mono tracking-tight">
                   ${calculations.monthlyPayment.toLocaleString()}
                 </span>
-                <span className="text-sm sm:text-base font-bold text-emerald-400">USD/mes</span>
+                <span className="text-sm sm:text-base font-bold text-emerald-400">USD/mo</span>
               </div>
               <span className="text-xs text-slate-300 mt-1 block">
-                Durante {termMonths} cuotas fijas mensuales
+                Over {termMonths} fixed monthly installments
               </span>
             </div>
 
             {/* Breakdown Table */}
             <div className="space-y-2 py-3.5 border-y border-emerald-800/50 text-xs font-medium">
               <div className="flex justify-between text-slate-200">
-                <span>Vehículo seleccionado:</span>
+                <span>Selected vehicle:</span>
                 <span className="font-bold text-white truncate max-w-[200px]">{currentCar.name}</span>
               </div>
               <div className="flex justify-between text-slate-200">
-                <span>Precio del vehículo:</span>
+                <span>Vehicle list price:</span>
                 <span className="font-mono text-white font-bold">${customPrice.toLocaleString()} USD</span>
               </div>
               <div className="flex justify-between text-slate-200">
-                <span>Enganche inicial ({downPaymentPercent}%):</span>
+                <span>Down payment ({downPaymentPercent}%):</span>
                 <span className="font-mono text-[#67eb34] font-black">${calculations.downPaymentAmount.toLocaleString()} USD</span>
               </div>
               <div className="flex justify-between text-slate-200">
-                <span>Monto a financiar:</span>
+                <span>Financed principal:</span>
                 <span className="font-mono text-white font-bold">${calculations.principal.toLocaleString()} USD</span>
               </div>
               <div className="flex justify-between text-slate-200">
-                <span>Tasa anual (APR fija):</span>
-                <span className="font-mono text-emerald-300 font-bold">{interestRate}% TAE</span>
+                <span>Fixed APR rate:</span>
+                <span className="font-mono text-emerald-300 font-bold">{interestRate}% APR</span>
               </div>
             </div>
 
@@ -254,20 +254,20 @@ export const FinancingCalculator: React.FC<FinancingCalculatorProps> = ({
                   <div className="w-8 h-8 rounded-full bg-[#67eb34] text-black flex items-center justify-center mx-auto font-black text-sm">
                     ✓
                   </div>
-                  <h4 className="text-sm font-black text-white">¡Solicitud Recibida con Éxito!</h4>
+                  <h4 className="text-sm font-black text-white">Application Received Successfully!</h4>
                   <p className="text-xs text-emerald-200 leading-relaxed">
-                    Un asesor financiero senior de Velox Motors se comunicará a <strong>{applicantEmail}</strong> en menos de 2 horas.
+                    A senior private wealth advisor from Velox Motors will contact you at <strong>{applicantEmail}</strong> within 2 hours.
                   </p>
                 </div>
               ) : (
                 <form onSubmit={handlePreApproveSubmit} className="space-y-2.5">
                   <span className="text-xs font-black text-slate-100 block">
-                    Solicita Pre-Aprobación Sin Compromiso
+                    Request Confidential Pre-Approval
                   </span>
                   <input
                     type="text"
                     required
-                    placeholder="Nombre completo"
+                    placeholder="Full name"
                     value={applicantName}
                     onChange={(e) => setApplicantName(e.target.value)}
                     className="w-full px-3 py-2 rounded-xl bg-[#020d07] border border-emerald-900/70 text-xs sm:text-sm text-white placeholder-slate-400 focus:outline-none focus:border-[#67eb34]"
@@ -275,7 +275,7 @@ export const FinancingCalculator: React.FC<FinancingCalculatorProps> = ({
                   <input
                     type="email"
                     required
-                    placeholder="Correo electrónico corporativo / personal"
+                    placeholder="Corporate or personal email"
                     value={applicantEmail}
                     onChange={(e) => setApplicantEmail(e.target.value)}
                     className="w-full px-3 py-2 rounded-xl bg-[#020d07] border border-emerald-900/70 text-xs sm:text-sm text-white placeholder-slate-400 focus:outline-none focus:border-[#67eb34]"
@@ -293,7 +293,7 @@ export const FinancingCalculator: React.FC<FinancingCalculatorProps> = ({
                     whileTap={{ scale: 0.95 }}
                     className="w-full py-2.5 rounded-xl bg-gradient-to-r from-[#67eb34] via-[#4ade80] to-[#22c55e] text-black font-black text-xs uppercase tracking-wide transition-all shadow-[0_0_15px_rgba(103,235,52,0.4)] cursor-pointer"
                   >
-                    Obtener Pre-Aprobación Express →
+                    Get Express Pre-Approval →
                   </motion.button>
                 </form>
               )}

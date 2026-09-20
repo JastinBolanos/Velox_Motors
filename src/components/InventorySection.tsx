@@ -20,11 +20,11 @@ export const InventorySection: React.FC<InventorySectionProps> = ({
   const [sortBy, setSortBy] = useState<'featured' | 'price-asc' | 'price-desc' | 'power-desc' | 'accel-asc'>('featured');
 
   const categories: { id: CarCategory; label: string }[] = [
-    { id: 'all', label: 'Todos los Modelos' },
+    { id: 'all', label: 'All Models' },
     { id: 'hypercars', label: 'Hypercars & V10' },
-    { id: 'electric', label: '100% Eléctricos EV' },
-    { id: 'sports', label: 'Deportivos GT' },
-    { id: 'concepts', label: 'Conceptos & Prototipos' },
+    { id: 'electric', label: '100% Electric EV' },
+    { id: 'sports', label: 'GT Sports' },
+    { id: 'concepts', label: 'Concepts & Prototypes' },
   ];
 
   const filteredCars = useMemo(() => {
@@ -67,13 +67,13 @@ export const InventorySection: React.FC<InventorySectionProps> = ({
         <div>
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/15 border border-emerald-500/40 text-xs font-bold text-[#67eb34] uppercase tracking-wider mb-3">
             <Sparkles className="w-3.5 h-3.5" />
-            Catálogo Disponible en Salón
+            Available Showroom Catalog
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight">
-            Inventario de <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#67eb34] via-[#86efac] to-emerald-400">Autos Exclusivos</span>
+            Curated <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#67eb34] via-[#86efac] to-emerald-400">Exclusive Inventory</span>
           </h2>
           <p className="text-slate-300 text-xs sm:text-sm md:text-base mt-2 max-w-2xl leading-relaxed">
-            Cada vehículo ha sido seleccionado rigurosamente bajo estándares de competición y lujo. Disponibles para entrega inmediata con garantía oficial de 5 años.
+            Every vehicle is rigorously curated according to elite motorsport and luxury standards. Ready for immediate delivery with an official 5-year warranty.
           </p>
         </div>
 
@@ -81,7 +81,7 @@ export const InventorySection: React.FC<InventorySectionProps> = ({
         <div className="flex items-center gap-3">
           <div className="px-4 py-2 rounded-xl bg-[#041d10] border border-emerald-500/40 text-xs font-mono text-emerald-300 flex items-center gap-2.5 shadow-md">
             <span className="w-2 h-2 rounded-full bg-[#67eb34] animate-pulse" />
-            <span className="font-bold">{filteredCars.length} de {CARS_DATA.length} Unidades Disponibles</span>
+            <span className="font-bold">{filteredCars.length} of {CARS_DATA.length} Vehicles Available</span>
           </div>
         </div>
       </div>
@@ -123,7 +123,7 @@ export const InventorySection: React.FC<InventorySectionProps> = ({
             <Search className="w-4 h-4 text-emerald-500/80 absolute left-3.5 top-1/2 -translate-y-1/2" />
             <input
               type="text"
-              placeholder="Buscar por marca o modelo..."
+              placeholder="Search by make, model, or spec..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               className="w-full pl-9 pr-3.5 py-2 rounded-xl bg-[#020d07] border border-emerald-900/70 text-xs sm:text-sm text-white placeholder-slate-400 focus:outline-none focus:border-[#67eb34] focus:ring-1 focus:ring-[#67eb34]"
@@ -138,11 +138,11 @@ export const InventorySection: React.FC<InventorySectionProps> = ({
               onChange={(e) => setSortBy(e.target.value as any)}
               className="w-full sm:w-52 px-3 py-2 rounded-xl bg-[#020d07] border border-emerald-900/70 text-xs sm:text-sm font-semibold text-slate-200 focus:outline-none focus:border-[#67eb34] cursor-pointer"
             >
-              <option value="featured">Destacados Velox</option>
-              <option value="price-asc">Precio: Menor a Mayor</option>
-              <option value="price-desc">Precio: Mayor a Menor</option>
-              <option value="power-desc">Potencia: Mayor HP</option>
-              <option value="accel-asc">Aceleración: 0-100 más rápido</option>
+              <option value="featured">Velox Curated</option>
+              <option value="price-asc">Price: Low to High</option>
+              <option value="price-desc">Price: High to Low</option>
+              <option value="power-desc">Power: Highest HP</option>
+              <option value="accel-asc">Acceleration: Fastest 0-100</option>
             </select>
           </div>
         </div>
@@ -152,12 +152,12 @@ export const InventorySection: React.FC<InventorySectionProps> = ({
       {/* Grid of Car Cards - Extended Across Screen */}
       {filteredCars.length === 0 ? (
         <div className="py-24 text-center rounded-3xl bg-[#03150d] border-2 border-emerald-950/80">
-          <p className="text-slate-300 text-lg">No encontramos vehículos que coincidan con tu búsqueda.</p>
+          <p className="text-slate-300 text-lg">No vehicles found matching your search criteria.</p>
           <button
             onClick={() => { setSelectedCategory('all'); setSearchQuery(''); }}
             className="mt-6 px-6 py-3 rounded-2xl bg-emerald-500/20 text-[#67eb34] border border-emerald-500/40 text-sm font-bold hover:bg-emerald-500/30 transition-colors cursor-pointer"
           >
-            Restablecer Filtros
+            Reset Filters
           </button>
         </div>
       ) : (
@@ -201,7 +201,7 @@ export const InventorySection: React.FC<InventorySectionProps> = ({
                   <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity bg-black/45 backdrop-blur-[2px]">
                     <span className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-[#67eb34] text-black font-extrabold text-xs shadow-xl transform translate-y-1 group-hover:translate-y-0 transition-transform">
                       <Eye className="w-3.5 h-3.5 text-black stroke-[2.5]" />
-                      <span>Ver Ficha & Colores</span>
+                      <span>View Specs & Colors</span>
                     </span>
                   </div>
                 </div>
@@ -226,11 +226,11 @@ export const InventorySection: React.FC<InventorySectionProps> = ({
                         <span className="text-xs sm:text-sm font-black text-white font-mono">{car.specs.acceleration0to100}s</span>
                       </div>
                       <div className="bg-[#021008] p-2 rounded-lg border border-emerald-950/80">
-                        <span className="text-[10px] text-slate-400 uppercase font-semibold block">Potencia</span>
+                        <span className="text-[10px] text-slate-400 uppercase font-semibold block">Power</span>
                         <span className="text-xs sm:text-sm font-black text-[#67eb34] font-mono">{car.specs.horsepower} HP</span>
                       </div>
                       <div className="bg-[#021008] p-2 rounded-lg border border-emerald-950/80">
-                        <span className="text-[10px] text-slate-400 uppercase font-semibold block">Máxima</span>
+                        <span className="text-[10px] text-slate-400 uppercase font-semibold block">Top Speed</span>
                         <span className="text-xs sm:text-sm font-black text-white font-mono">{car.specs.topSpeed} km/h</span>
                       </div>
                     </div>
@@ -241,16 +241,16 @@ export const InventorySection: React.FC<InventorySectionProps> = ({
                     <div className="flex items-baseline justify-between mb-3">
                       <div>
                         <span className="text-[10px] text-slate-400 uppercase tracking-wider block font-bold">
-                          Precio de Venta
+                          Vehicle Price
                         </span>
                         <span className="text-lg sm:text-xl font-black text-white font-mono">
                           ${car.priceUSD.toLocaleString()}
                         </span>
                       </div>
                       <div className="text-right">
-                        <span className="text-[10px] text-slate-400 block font-medium">Cuota leasing</span>
+                        <span className="text-[10px] text-slate-400 block font-medium">Lease estimate</span>
                         <span className="text-xs sm:text-sm font-bold text-[#67eb34] font-mono">
-                          ${car.monthlyLeaseEst.toLocaleString()}/mes
+                          ${car.monthlyLeaseEst.toLocaleString()}/mo
                         </span>
                       </div>
                     </div>
@@ -285,7 +285,7 @@ export const InventorySection: React.FC<InventorySectionProps> = ({
                         whileTap={{ scale: 0.95 }}
                         className="w-full relative overflow-hidden inline-flex items-center justify-center gap-1.5 px-3 py-2 rounded-lg bg-gradient-to-r from-[#67eb34] via-[#4ade80] to-[#22c55e] text-black text-xs font-extrabold tracking-wide uppercase shadow-[0_0_15px_rgba(103,235,52,0.35)] cursor-pointer"
                       >
-                        <span className="relative z-10">Detalles</span>
+                        <span className="relative z-10">Details</span>
                         <ArrowRight className="w-3 h-3 text-black stroke-[2.5] relative z-10" />
                       </motion.button>
                     </div>

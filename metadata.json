@@ -1,6 +1,6 @@
 {
-  "name": "Velox Motors | Venta de Autos de Lujo & Futuristas",
-  "description": "Showroom exclusivo de venta de autos deportivos, hypercars y vehículos eléctricos futuristas con inventario interactivo, prueba de manejo y financiamiento.",
+  "name": "Velox Motors | Luxury & Futuristic Automotive Showroom",
+  "description": "Exclusive digital showroom for exotic supercars, hypercars, and next-gen electric vehicles featuring interactive inventory, circuit test drive booking, and bespoke financing.",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }

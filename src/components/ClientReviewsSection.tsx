@@ -8,13 +8,13 @@ export const ClientReviewsSection: React.FC = () => {
       <div className="text-center max-w-4xl mx-auto mb-16">
         <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-emerald-500/15 border border-emerald-500/40 text-xs sm:text-sm font-bold text-[#67eb34] uppercase tracking-wider mb-4">
           <Star className="w-4 h-4 fill-[#67eb34]" />
-          Experiencias de Coleccionistas
+          Collector Testimonials & Experiences
         </div>
         <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight">
-          La Confianza de Quienes Conducen el <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#67eb34] via-[#86efac] to-emerald-400">Futuro</span>
+          Trusted by Those Who Drive the <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#67eb34] via-[#86efac] to-emerald-400">Future</span>
         </h2>
         <p className="text-slate-300 text-base sm:text-lg lg:text-xl mt-3 leading-relaxed">
-          Más de 450 superdeportivos entregados en 18 países con un índice de recomendación del 99.4%.
+          Over 450 hypercars delivered across 18 countries with a 99.4% client recommendation rating.
         </p>
       </div>
 

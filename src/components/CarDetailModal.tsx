@@ -43,7 +43,7 @@ export const CarDetailModal: React.FC<CarDetailModalProps> = ({
                 {car.badge}
               </span>
               <span className="text-sm text-slate-300 font-semibold font-mono">
-                Año {car.specs.year} • {car.brand}
+                Year {car.specs.year} • {car.brand}
               </span>
             </div>
 
@@ -51,7 +51,7 @@ export const CarDetailModal: React.FC<CarDetailModalProps> = ({
               type="button"
               onClick={onClose}
               className="p-2.5 rounded-full bg-emerald-950/80 hover:bg-emerald-900 border border-emerald-700/60 text-slate-300 hover:text-white transition-colors cursor-pointer"
-              aria-label="Cerrar modal"
+              aria-label="Close modal"
             >
               <X className="w-6 h-6" />
             </button>
@@ -78,7 +78,7 @@ export const CarDetailModal: React.FC<CarDetailModalProps> = ({
                     className="w-3.5 h-3.5 rounded-full border border-white/50" 
                     style={{ backgroundColor: selectedColor.hex }} 
                   />
-                  <span>Pintura seleccionada: <strong>{selectedColor.name}</strong></span>
+                  <span>Selected Finish: <strong>{selectedColor.name}</strong></span>
                 </div>
 
                 <div className="absolute bottom-4 right-4 px-3 py-1.5 rounded-full bg-emerald-950/80 border border-emerald-500/40 text-xs font-mono text-[#67eb34]">
@@ -91,7 +91,7 @@ export const CarDetailModal: React.FC<CarDetailModalProps> = ({
                 
                 {/* Thumbnails */}
                 <div className="flex items-center gap-2">
-                  <span className="text-xs text-slate-400 font-semibold mr-1">Vistas:</span>
+                  <span className="text-xs text-slate-400 font-semibold mr-1">Views:</span>
                   {car.gallery.map((imgUrl, i) => (
                     <button
                       key={i}
@@ -108,7 +108,7 @@ export const CarDetailModal: React.FC<CarDetailModalProps> = ({
 
                 {/* Exterior Color Selector */}
                 <div className="flex items-center gap-3">
-                  <span className="text-xs text-slate-300 font-semibold">Configurar Color:</span>
+                  <span className="text-xs text-slate-300 font-semibold">Select Colorway:</span>
                   <div className="flex items-center gap-2">
                     {car.colors.map((col) => (
                       <button
@@ -149,50 +149,50 @@ export const CarDetailModal: React.FC<CarDetailModalProps> = ({
             <div className="space-y-3">
               <h3 className="text-xs font-bold uppercase tracking-wider text-slate-400 flex items-center gap-2">
                 <Gauge className="w-4 h-4 text-[#67eb34]" />
-                Ficha Técnica Certificada de Fábrica
+                Factory Certified Technical Specifications
               </h3>
 
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
                 <div className="p-3.5 rounded-xl bg-[#03150b] border border-emerald-900/50">
-                  <span className="text-[10px] text-slate-400 uppercase font-semibold block">Potencia Neta</span>
+                  <span className="text-[10px] text-slate-400 uppercase font-semibold block">Power Output</span>
                   <span className="text-xl font-extrabold text-white font-mono">{car.specs.horsepower} HP</span>
                   <span className="text-[10px] text-emerald-400/80 block mt-0.5">{car.specs.drivetrain}</span>
                 </div>
 
                 <div className="p-3.5 rounded-xl bg-[#03150b] border border-emerald-900/50">
-                  <span className="text-[10px] text-slate-400 uppercase font-semibold block">Aceleración 0-100</span>
+                  <span className="text-[10px] text-slate-400 uppercase font-semibold block">0-100 km/h (0-62 mph)</span>
                   <span className="text-xl font-extrabold text-[#67eb34] font-mono">{car.specs.acceleration0to100}s</span>
-                  <span className="text-[10px] text-slate-400 block mt-0.5">Con Launch Control</span>
+                  <span className="text-[10px] text-slate-400 block mt-0.5">With Launch Control</span>
                 </div>
 
                 <div className="p-3.5 rounded-xl bg-[#03150b] border border-emerald-900/50">
-                  <span className="text-[10px] text-slate-400 uppercase font-semibold block">Velocidad Máxima</span>
+                  <span className="text-[10px] text-slate-400 uppercase font-semibold block">Top Speed</span>
                   <span className="text-xl font-extrabold text-white font-mono">{car.specs.topSpeed} km/h</span>
-                  <span className="text-[10px] text-slate-400 block mt-0.5">Limitada electrónicamente</span>
+                  <span className="text-[10px] text-slate-400 block mt-0.5">Electronically limited</span>
                 </div>
 
                 <div className="p-3.5 rounded-xl bg-[#03150b] border border-emerald-900/50">
-                  <span className="text-[10px] text-slate-400 uppercase font-semibold block">Propulsión</span>
+                  <span className="text-[10px] text-slate-400 uppercase font-semibold block">Powertrain</span>
                   <span className="text-sm font-bold text-white leading-tight block mt-1">{car.specs.rangeOrEngine}</span>
                 </div>
 
                 <div className="p-3.5 rounded-xl bg-[#03150b] border border-emerald-900/50">
-                  <span className="text-[10px] text-slate-400 uppercase font-semibold block">Transmisión</span>
+                  <span className="text-[10px] text-slate-400 uppercase font-semibold block">Transmission</span>
                   <span className="text-xs font-semibold text-white block mt-1">{car.specs.transmission}</span>
                 </div>
 
                 <div className="p-3.5 rounded-xl bg-[#03150b] border border-emerald-900/50">
-                  <span className="text-[10px] text-slate-400 uppercase font-semibold block">Peso en Vacío</span>
+                  <span className="text-[10px] text-slate-400 uppercase font-semibold block">Curb Weight</span>
                   <span className="text-sm font-extrabold text-white font-mono mt-1">{car.specs.weight}</span>
                 </div>
 
                 <div className="p-3.5 rounded-xl bg-[#03150b] border border-emerald-900/50">
-                  <span className="text-[10px] text-slate-400 uppercase font-semibold block">Garantía Incluida</span>
-                  <span className="text-xs font-semibold text-[#67eb34] block mt-1">5 Años o 100,000 km</span>
+                  <span className="text-[10px] text-slate-400 uppercase font-semibold block">Factory Warranty</span>
+                  <span className="text-xs font-semibold text-[#67eb34] block mt-1">5 Years or 100,000 km</span>
                 </div>
 
                 <div className="p-3.5 rounded-xl bg-[#03150b] border border-emerald-900/50">
-                  <span className="text-[10px] text-slate-400 uppercase font-semibold block">Estado del Stock</span>
+                  <span className="text-[10px] text-slate-400 uppercase font-semibold block">Stock Status</span>
                   <span className="text-xs font-semibold text-emerald-300 block mt-1">{car.status}</span>
                 </div>
               </div>
@@ -202,7 +202,7 @@ export const CarDetailModal: React.FC<CarDetailModalProps> = ({
             <div className="space-y-3">
               <h3 className="text-xs font-bold uppercase tracking-wider text-slate-400 flex items-center gap-2">
                 <Sparkles className="w-4 h-4 text-[#67eb34]" />
-                Equipamiento Destacado & Tecnología
+                Key Engineering Highlights & Technology
               </h3>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
                 {car.highlights.map((h, idx) => (
@@ -217,7 +217,7 @@ export const CarDetailModal: React.FC<CarDetailModalProps> = ({
             {/* Footer Actions */}
             <div className="pt-6 border-t border-emerald-900/60 flex flex-col sm:flex-row items-center justify-between gap-4">
               <div>
-                <span className="text-xs text-slate-400 block">Precio Total con Impuestos</span>
+                <span className="text-xs text-slate-400 block">Total Price (Taxes & Duties Included)</span>
                 <span className="text-2xl sm:text-3xl font-black text-white font-mono">
                   ${car.priceUSD.toLocaleString()} USD
                 </span>
@@ -232,7 +232,7 @@ export const CarDetailModal: React.FC<CarDetailModalProps> = ({
                   className="w-full sm:w-auto px-5 py-3 rounded-full bg-[#0a351d] hover:bg-[#114b29] border border-emerald-500/40 text-white font-bold text-xs uppercase tracking-wider transition-colors cursor-pointer flex items-center justify-center gap-2"
                 >
                   <Calendar className="w-4 h-4 text-[#67eb34] animate-icon-bob" />
-                  <span>Agendar Test Drive</span>
+                  <span>Book Test Drive</span>
                 </motion.button>
 
                 <motion.button
@@ -249,7 +249,7 @@ export const CarDetailModal: React.FC<CarDetailModalProps> = ({
                   whileTap={{ scale: 0.94 }}
                   className="w-full sm:w-auto px-6 py-3 rounded-full bg-gradient-to-r from-[#67eb34] via-[#4ade80] to-[#22c55e] text-black font-extrabold text-xs uppercase tracking-wide transition-all shadow-[0_0_25px_rgba(103,235,52,0.5)] cursor-pointer flex items-center justify-center gap-2"
                 >
-                  <span>Reservar Unidad</span>
+                  <span>Reserve Vehicle</span>
                   <ArrowRight className="w-4 h-4 text-black animate-arrow-bounce" />
                 </motion.button>
               </div>

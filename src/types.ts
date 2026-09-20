@@ -27,7 +27,7 @@ export interface CarItem {
   priceUSD: number;
   monthlyLeaseEst: number;
   badge: string;
-  status: 'Disponible Inmediato' | 'Unidad Exclusiva' | 'Edición Limitada' | 'Bajo Pedido';
+  status: 'Immediate Delivery' | 'Exclusive Unit' | 'Limited Edition' | 'Made to Order' | string;
   featuredImage: string;
   gallery: string[];
   specs: CarSpecs;

@@ -1,68 +1,82 @@
 <div align="center">
+  <img alt="Velox Motors Banner" src="https://github.com/user-attachments/assets/4c73ffcf-890c-42e5-8c20-391009b2f2b2" width="50%" />
 
-# 🏎️ Velox Motors
-### Luxury & Futuristic Hypercar Digital Showroom
+  <br>
 
-An interactive, high-performance client-side web application crafted to showcase exotic sports cars, track-focused hypercars, and next-generation electric vehicles.
+  <h3>⚡ Velox Motors | Luxury & Futuristic Hypercar Showroom (v1.0.0-PROD)</h3>
 
-<br/>
-
-[![React](https://img.shields.io/badge/React_19-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://react.dev/)
-[![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
-[![Vite](https://img.shields.io/badge/Vite_8-646CFF?style=for-the-badge&logo=vite&logoColor=white)](https://vitejs.dev/)
-[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS_v4-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
-[![Motion](https://img.shields.io/badge/Motion-0055FF?style=for-the-badge&logo=framer&logoColor=white)](https://motion.dev/)
-[![Lucide](https://img.shields.io/badge/Lucide_Icons-F56565?style=for-the-badge&logo=feather&logoColor=white)](https://lucide.dev/)
-[![HTML5 Canvas](https://img.shields.io/badge/HTML5_Canvas-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API)
-
-<br/>
-
+  <p>
+    <img src="https://img.shields.io/badge/build-passing-brightgreen" alt="Build Status" />
+    <img src="https://img.shields.io/badge/deployment-production-blue" alt="Deployment" />
+    <img src="https://img.shields.io/badge/version-1.0.0--PROD-orange" alt="Version" />
+    <img src="https://img.shields.io/badge/performance-optimized-success" alt="Performance" />
+  </p>
 </div>
+
+<br>
+
+> **Premium Web Platform & Digital Hypercar Showroom.**  
+> An interactive, high-performance client-side web application crafted to showcase exotic sports cars, track-focused hypercars, and next-generation electric vehicles.
+
+<br>
+
+<div align="center">
+  <h3>🌍 <b><a href="https://velox-motors-zeta.vercel.app/">View Live Platform (Production) 🟢</a></b></h3>
+  <br>
+  <img alt="Velox Motors Preview" src="https://github.com/user-attachments/assets/d3872a15-4f60-412a-b66f-4edc553436fe" width="80%" />
+</div>
+
+## 🎥 Digital Showroom Platform Demo
+
+**🎬 Interactive Vehicle Exploration & UI Walkthrough**  
+Walkthrough of the client interface: exploring hypercar catalogs, real-time telemetry, Cyber-Green HTML5 Canvas effects, interactive vehicle configurations, and the financial leasing simulator.
+
+https://github.com/user-attachments/assets/6b523ce1-1b48-47f0-ab0d-6d541a90c433
 
 ---
 
-## 🌟 Key Features & Accomplishments
+### 🌟 Key Features & Accomplishments
 
 Developed with meticulous attention to detail, performance, and user experience, Velox Motors delivers a full-featured client-side showroom experience:
 
-### 1. 🌌 Atmospheric Visuals & Real-Time Neon Rain (`NeonRainEffect`)
-* **Cyber-Green Canvas Particle Engine**: Built directly on the native HTML5 Canvas API, rendering illuminated rainfall, luminescent light trails, ambient floating orbs, and dynamic impact splashes at a silky-smooth 60 FPS with minimal GPU overhead.
-* **User Intensity Controls**: Visitors can toggle intensity profiles between *Intense*, *Elegant*, *Subtle*, or pause the animation entirely according to personal preference or hardware performance.
-* **Distinctive Color Palette**: Rich, deep blacks (`#020a06`) layered with emerald undertones and high-contrast laser lime neons (`#67eb34`).
+* 🌌 **Atmospheric Visuals & Real-Time Neon Rain (`NeonRainEffect`)**
+  * **Cyber-Green Canvas Particle Engine**: Built directly on the native HTML5 Canvas API, rendering illuminated rainfall, luminescent light trails, ambient floating orbs, and dynamic impact splashes at a silky-smooth 60 FPS with minimal GPU overhead.
+  * **User Intensity Controls**: Visitors can toggle intensity profiles between *Intense*, *Elegant*, *Subtle*, or pause the animation entirely according to personal preference or hardware performance.
+  * **Distinctive Color Palette**: Rich, deep blacks (`#020a06`) layered with emerald undertones and high-contrast laser lime neons (`#67eb34`).
 
-### 2. ⚡ Cinematic Hero Section
-* **Dynamic Flagship Vehicle Switcher**: Interactive browsing of the dealership's highlighted halo models in real time.
-* **Instant Live Telemetry**: Dynamic performance metrics including 0–100 km/h acceleration, engine horsepower (HP), top speed (km/h), and drivetrain layout.
-* **High-Impact Quick Actions**: Direct entry points to book a private track test drive, inspect the full inventory, or jump into the financing simulator.
+* ⚡ **Cinematic Hero Section**
+  * **Dynamic Flagship Vehicle Switcher**: Interactive browsing of the dealership's highlighted halo models in real time.
+  * **Instant Live Telemetry**: Dynamic performance metrics including 0–100 km/h acceleration, engine horsepower (HP), top speed (km/h), and drivetrain layout.
+  * **High-Impact Quick Actions**: Direct entry points to book a private track test drive, inspect the full inventory, or jump into the financing simulator.
 
-### 3. 🔍 Interactive Showroom Inventory
-* **Category Filtering**: Seamlessly filter between Hypercars, Pure Electric, Performance Sports Cars, Prototypes/Concepts, and the entire catalog.
-* **Real-Time Instant Search**: Live query filtering across model names, manufacturers, or key technical specifications.
-* **Multi-Criteria Sorting**: Sort by price (low-to-high or high-to-low), raw horsepower, or fastest acceleration times.
-* **Informative Vehicle Cards**: Real-time availability badges (*Available Immediately*, *Limited Edition*, *Custom Order*), estimated monthly leasing figures, and rapid access to full technical sheets.
+* 🔍 **Interactive Showroom Inventory**
+  * **Category Filtering**: Seamlessly filter between Hypercars, Pure Electric, Performance Sports Cars, Prototypes/Concepts, and the entire catalog.
+  * **Real-Time Instant Search**: Live query filtering across model names, manufacturers, or key technical specifications.
+  * **Multi-Criteria Sorting**: Sort by price (low-to-high or high-to-low), raw horsepower, or fastest acceleration times.
+  * **Informative Vehicle Cards**: Real-time availability badges (*Available Immediately*, *Limited Edition*, *Custom Order*), estimated monthly leasing figures, and rapid access to full technical sheets.
 
-### 4. 📋 Comprehensive Vehicle Detail Modal (`CarDetailModal`)
-* **Interactive Media Gallery**: High-resolution exterior and interior angles with responsive thumbnail switching.
-* **Bespoke Color & Finish Selector**: Real-time exterior paint configurator previewing bespoke tones and contrasting accents.
-* **Full Specification Sheet**: Model year, curb weight, transmission architecture, powertrain/battery capacity (kWh), and performance ratings.
-* **Highlighted Equipment & Tech**: Detailed breakdown of driver assist systems, active aerodynamics, telemetry hardware, and handcrafted interior appointments.
+* 📋 **Comprehensive Vehicle Detail Modal (`CarDetailModal`)**
+  * **Interactive Media Gallery**: High-resolution exterior and interior angles with responsive thumbnail switching.
+  * **Bespoke Color & Finish Selector**: Real-time exterior paint configurator previewing bespoke tones and contrasting accents.
+  * **Full Specification Sheet**: Model year, curb weight, transmission architecture, powertrain/battery capacity (kWh), and performance ratings.
+  * **Highlighted Equipment & Tech**: Detailed breakdown of driver assist systems, active aerodynamics, telemetry hardware, and handcrafted interior appointments.
 
-### 5. 🧮 Interactive Financing & Lease Calculator (`FinancingCalculator`)
-* **Flexible Parametric Simulation**: Custom sliders for down payment percentages (10% to 60%), loan terms (24, 36, 48, 60, and 72 months), and annual interest rates.
-* **Transparent Breakdown**: Automatic real-time recalculation of estimated monthly payments, projected interest costs, and total vehicle investment.
-* **Direct Inventory Integration**: Select "Calculate Financing" from any vehicle card or technical modal to automatically load that vehicle's pricing into the calculator.
+* 🧮 **Interactive Financing & Lease Calculator (`FinancingCalculator`)**
+  * **Flexible Parametric Simulation**: Custom sliders for down payment percentages (10% to 60%), loan terms (24, 36, 48, 60, and 72 months), and annual interest rates.
+  * **Transparent Breakdown**: Automatic real-time recalculation of estimated monthly payments, projected interest costs, and total vehicle investment.
+  * **Direct Inventory Integration**: Select "Calculate Financing" from any vehicle card or technical modal to automatically load that vehicle's pricing into the calculator.
 
-### 6. 📅 VIP Booking & Reservation Suite
-* **VIP Test Drive Agendament (`TestDriveModal`)**: Multi-step booking form allowing clients to choose a private track location, preferred date, time slot, and personal contact details, with instant visual confirmation and pass generation.
-* **Online Unit Reservation (`ReservationModal`)**: Exclusive reservation flow to secure allocated units with generated security confirmation tokens.
+* 📅 **VIP Booking & Reservation Suite**
+  * **VIP Test Drive Agendament (`TestDriveModal`)**: Multi-step booking form allowing clients to choose a private track location, preferred date, time slot, and personal contact details, with instant visual confirmation and pass generation.
+  * **Online Unit Reservation (`ReservationModal`)**: Exclusive reservation flow to secure allocated units with generated security confirmation tokens.
 
-### 7. 🛡️ White-Glove Services & Verified Client Testimonials
-* **VIP Ownership Experience**: Highlighted services including enclosed door-to-door carrier transport, bespoke personalization programs, global concierge warranty, and private wealth advisory.
-* **Collector Reviews**: Authentic community feedback featuring verified buyer roles, 5-star ratings, timestamps, and ownership impressions.
+* 🛡️ **White-Glove Services & Verified Client Testimonials**
+  * **VIP Ownership Experience**: Highlighted services including enclosed door-to-door carrier transport, bespoke personalization programs, global concierge warranty, and private wealth advisory.
+  * **Collector Reviews**: Authentic community feedback featuring verified buyer roles, 5-star ratings, timestamps, and ownership impressions.
 
 ---
 
-## 🛠️ Technology Stack & Tools
+### 🛠️ Technology Stack & Tools
 
 * **React 19**: Modern declarative UI framework utilizing functional components, custom hooks, and optimized state handling.
 * **TypeScript**: Strict type definitions and interfaces for all vehicle specifications, financing parameters, and booking records.
@@ -74,7 +88,7 @@ Developed with meticulous attention to detail, performance, and user experience,
 
 ---
 
-## 📁 Project Architecture
+### 📁 Project Architecture
 
 ```text
 ├── index.html                  # HTML entry point with Plus Jakarta Sans & Outfit typography
